@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+/* 초기화 */
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {border: 0;}
+button {border: 0; outline: 0;}
+h1, h2, h3, h4, h5, p, a {color: #464646; font-family: 'Noto Sans KR', sans-serif;}
+.hidden {position: absolute; left: -9999px;}
+.clearfix::before, .clearfix::after {display: block; content: ''; clear: both;}
+
+/*
+font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Roboto Mono', monospace;
+#00cec9;
+#0984e3;
+#74b9ff;
+#ff7675;
+#d63031;
+*/
+
+/* 레이아웃 크기지정 */
+
+#header, #section, #footer {min-width: 1070px;}
+#topWrap, .contentsWreap {margin-left: auto; margin-right: auto; width: 1070px; text-align: center;}
+
+/* 상단 헤드 */
+#header .topGnb {padding-top: 30px; border-bottom: 1px solid rgba(0, 0, 0, .2);}
+#header .topGnb .subNav1 {float: left; padding: 10px 0 0 10px;}
+#header .topGnb .subNav1 ul li {float: left; padding: 10px; background: url(../images/line.png) right no-repeat;}
+#header .topGnb .subNav1 ul li.lastList {background: url();}
+#header .topGnb .subNav1 ul li a {font-size: 14px; font-weight: 300;}
+#header .topGnb h1 {display: inline-block; padding-bottom: 15px;}
+#header .topGnb .subNav2 {float: right; padding: 10px 10px 0 0;}
+#header .topGnb .subNav2 ul li {float: left; padding: 10px;}
+#header .topGnb .subNav2 ul li.firstList {background: url(../images/line.png) right no-repeat;}
+#header .topGnb .subNav2 ul li a {font-size: 14px; font-weight: 300;}
+#header .topGnb .subNav2 ul li.phone a {padding: 6px 15px; border-radius: 15px; background: #00cec9; color: #fff;}
+
+/* 메인 네비 */
+#header .mainNav {text-align: center;}
+#header .mainNav ul li {position: relative; float: left; width: 16%; background: url(../images/dot.jpg) right no-repeat;}
+#header .mainNav ul li.lastList {background: url();}
+#header .mainNav ul li a {display: block; padding: 20px; font-family: 'Roboto Mono', monospace; font-size: 17px; text-transform: uppercase;}
+#header .mainNav ul li a:hover {color: #00cec9;}
+#header .mainNav ul li .mainNavSub {display: none; position: absolute; left: 0; top: 63px; z-index: 2; padding: none; background: #fff;}
+#header .mainNav ul li .mainNavSub li {width: 100%; background: url();}
+#header .mainNav ul li .mainNavSub li a {font-family: 'Noto Sans KR', sans-serif; font-weight: 300;}
+#header .mainNav ul li .mainNavSub li a:hover {background: rgba(0, 0, 0, .1);}
+
+/* 이미지 슬라이드 */
+#section #mainSlide {overflow: hidden; position: relative; width: 100%;}
+#section #mainSlide .text {position: absolute; top: 50%; left: 50%; z-index: 1; transform: translate(-50%, -50%); padding: 30px; text-align: center; background: rgba(0, 0, 0, .5);}
+#section #mainSlide .text .textTitle {color: #fff; font-size: 30px; }
+#section #mainSlide .text .bigText {padding: 20px; color: #00cec9; font-family: 'Roboto Mono', monospace; font-size: 50px;}
+#section #mainSlide .text .textCont {color: #fff; font-size: 18px; font-weight: 300;}
+
+/*  콘텐츠 타이틀 레이아웃 */
+.titleWrap {padding: 100px 0 30px 0;}
+.titleWrap .titleDeco {padding-bottom: 10px;  font-family: 'Roboto Mono', monospace;}
+.titleWrap .title {position: relative; color: #666; font-size: 28px; font-weight: 600;}
+.titleWrap .title:before {content: ''; display: block; position: absolute; left: 0; top: 50%; width: 420px; border: 1px solid rgba(0, 0, 0, .2);}
+.titleWrap .title:after {content: ''; display: block; position: absolute; right: 0; top: 50%; width: 420px; border: 1px solid rgba(0, 0, 0, .2);}
+
+/* 객실 미리보기 콘텐츠 */
+#roomContens .roomContensWrap {position: relative;}
+#roomContens .roomContensWrap .imgSlide2 {margin-left: 5px;}
+#roomContens .roomContensWrap .imgSlide2 .conts {position: relative; padding: 10px; width: 343px; background: #f4f4f4; text-align: left}
+#roomContens .roomContensWrap .imgSlide2 .conts .tit {padding: 5px 10px; font-size: 20px; }
+#roomContens .roomContensWrap .imgSlide2 .conts .text {padding: 5px 10px;font-weight: 300;}
+#roomContens .roomContensWrap .imgSlide2 .conts .rommBtn {position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: #74b9ff; padding: 8px 25px; color: #fff;}
+#roomContens .roomContensWrap .imgSlide2 .conts .line {position: absolute; right: 10px; top: 50%; transform: translateY(-50%); width: 80px; height: 50px; border: 1px solid #74b9ff;}
+#roomContens .roomContensWrap .imgSlide2 .slick-prev {position: absolute; left: -30px; top: 50%; transform: translate(-50%, -50%); z-index: 1; width: 60px; height: 60px; background: url(../images/prev.png) no-repeat; text-indent: -9999px;}
+#roomContens .roomContensWrap .imgSlide2 .slick-next {position: absolute; right: -50px; top: 50%; transform: translateY(-50%); width: 60px; height: 60px; background: url(../images/next.png) no-repeat; text-indent: -9999px;}
+
+/* 실시간 예약 콘텐츠 */
+#reservation {position: relative; margin-top: 100px; background: url(../images/reservationBg.png) fixed no-repeat;}
+#reservation .contentsWreap .text {display: block; padding: 100px 30px; float: left; text-align: left; }
+#reservation .contentsWreap .text .textTitle {padding-bottom: 20px; font-family: 'Roboto Mono', monospace; font-size: 38px; color: #ff7675;}
+#reservation .contentsWreap .text .textTitle span {font-weight: bold;}
+#reservation .contentsWreap .text .textCont {font-size: 22px; line-height: 35px;}
+#reservation .contentsWreap .reservationBtn {position: absolute; top: 50%; right: 20%; transform: translateY(-50%);}
+#reservation .contentsWreap .reservationBtn P {padding: 20px 50px; color:#fff; font-size: 18px; background: #0984e3;}
+
+/* 주변 관광지 콘텐츠 */
+#tourist .touristContentWrap {padding-top: 50px;}
+#tourist .touristContentWrap .conts1 {float: left;}
+#tourist .touristContentWrap .conts1 .contsTextWrap {float: right; width: 534px; height: 280px;}
+#tourist .touristContentWrap .conts2 {float: right;}
+#tourist .touristContentWrap .conts2 .contsTextWrap {float: left; width: 534px; height: 280px;}
+#tourist .contsTextWrap .tit {padding: 50px 0 10px 0; color: #0984e3; font-size: 25px;}
+#tourist .contsTextWrap .titDeco {padding-bottom: 20px; font-family: 'Roboto Mono', monospace; color: #999; font-size: 14px;}
+#tourist .contsTextWrap p {font-size: 14px; line-height: 25px;}
+#tourist .contentsWreap .touristBtn P {display: inline-block; margin-top: 60px; padding: 20px 70px; color:#fff; font-size: 20px; background: #0984e3;}
+
+/* 부대시설 콘텐츠 */
+#facility {margin-top: 110px; padding-bottom: 60px; background: #f4f4f4;}
+#facility .titleWrapLast {padding-top: 50px;}
+#facility .contentsWreap .enjoy {margin-top: 60px;}
+#facility .contentsWreap .facilityContentWrap {display: inline-block;}
+#facility .contentsWreap .facilityContentWrap .facilityListWrap {overflow: hidden; position: relative; width: 220px; height: 220px; border-radius: 100%;}
+#facility .contentsWreap .facilityContentWrap li.list1 .icon1 {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 100px; background: rgba(0, 0, 0, .6); transition: all .5s; opacity: 0;}
+#facility .contentsWreap .facilityContentWrap li.list2 .icon2 {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 100px; background: rgba(0, 0, 0, .6); transition: all .5s; opacity: 0;}
+#facility .contentsWreap .facilityContentWrap li.list3 .icon3 {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 100px; background: rgba(0, 0, 0, .6); transition: all .5s; opacity: 0;}
+#facility .contentsWreap .facilityContentWrap li.list4 .icon4 {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 100px; background: rgba(0, 0, 0, .6); transition: all .5s; opacity: 0;}
+#facility .contentsWreap .facilityContentWrap li.list1:hover .icon1 {transition: all .5s ease-in-out; opacity: 1;}
+#facility .contentsWreap .facilityContentWrap li.list2:hover .icon2 {transition: all .5s ease-in-out; opacity: 1;}
+#facility .contentsWreap .facilityContentWrap li.list3:hover .icon3 {transition: all .5s ease-in-out; opacity: 1;}
+#facility .contentsWreap .facilityContentWrap li.list4:hover .icon4 {transition: all .5s ease-in-out; opacity: 1;}
+#facility .contentsWreap .facilityContentWrap li {float: left; padding: 20px;}
+#facility .contentsWreap .facilityContentWrap li p {padding: 30px; font-size: 20px; font-weight: 300;}
+
+/* 푸터부분 */ 
+#footer {background: #333;}
+#footer .contentsWreap .info {display: block; padding: 50px 0 50px 40px; float: left; text-align: left;}
+#footer .contentsWreap .info p.tit {color: #999; font-size: 18px;}
+#footer .contentsWreap .info p.text {color: #666;}
+#footer .contentsWreap .address {display: block; padding: 50px 0 0 100px; float: left; text-align: left;}
+#footer .contentsWreap .address p.tit {color: #999; font-size: 18px;}
+#footer .contentsWreap .address p.text {color: #666;}
+#footer .contentsWreap .contact {display: block; padding: 50px 40px 0 0; float: right; text-align: left;}
+#footer .contentsWreap .contact p.tit {color: #999; font-size: 18px;}
+#footer .contentsWreap .contact p.text {color: #00cec9; font-size: 20px}
+#footer .copyright {display: inline-block; width: 100%; background: #2a2a2a; text-align: center}
+#footer .copyright img {padding: 20px; width: 10%;}
+
+
+
