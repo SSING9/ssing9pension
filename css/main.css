@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 /* 초기화 */
-
 * {margin: 0; padding: 0; box-sizing: border-box;}
 li {list-style: none;}
 a {text-decoration: none;}
@@ -112,7 +111,7 @@ font-family: 'Roboto Mono', monospace;
 #facility .contentsWreap .facilityContentWrap li {float: left; padding: 20px;}
 #facility .contentsWreap .facilityContentWrap li p {padding: 30px; font-size: 20px; font-weight: 300;}
 
-/* 푸터부분 */ 
+/* 푸터 */ 
 #footer {background: #333;}
 #footer .contentsWreap .info {display: block; padding: 50px 0 50px 40px; float: left; text-align: left;}
 #footer .contentsWreap .info p.tit {color: #999; font-size: 18px;}
@@ -123,6 +122,8 @@ font-family: 'Roboto Mono', monospace;
 #footer .contentsWreap .contact {display: block; padding: 50px 40px 0 0; float: right; text-align: left;}
 #footer .contentsWreap .contact p.tit {color: #999; font-size: 18px;}
 #footer .contentsWreap .contact p.text {color: #00cec9; font-size: 20px}
+
+/* 포트폴리오 바로가기 */
 .copyright {display: inline-block; width: 100%; background: #3a3a3a; text-align: center}
 .copyright img {padding: 20px;}
 
